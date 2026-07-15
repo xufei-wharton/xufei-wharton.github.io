@@ -15,9 +15,11 @@ body {
   font-family: Georgia, 'Times New Roman', serif;
   color: var(--ink);
   background: var(--bg);
-  line-height: 1.55;
+  line-height: 1.6;
   font-size: 17px;
 }
+
+::selection { background: #fdeecd; }
 
 .container { max-width: 880px; margin: 0 auto; padding: 0 22px; }
 
@@ -52,7 +54,16 @@ nav a.navlink:hover { color: var(--accent-2); }
 nav a.navlink.active { color: var(--ink); border-bottom: 2px solid var(--accent-2); padding-bottom: 2px; }
 
 /* ---------- headings & text ---------- */
-h1 { font-size: 30px; margin: 26px 0 4px; color: var(--ink); }
+h1 { font-size: 31px; margin: 26px 0 4px; color: var(--ink); }
+h1::after {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 3px;
+  background: var(--accent-2);
+  border-radius: 2px;
+  margin-top: 10px;
+}
 h2 {
   font-size: 21px;
   margin: 34px 0 12px;
@@ -66,11 +77,19 @@ h3 { font-size: 17.5px; margin: 22px 0 2px; }
   font-weight: bold;
   background: #fdf6ec;
   border-left: 4px solid var(--accent-2);
-  padding: 9px 14px;
-  margin: 18px 0;
+  border-radius: 0 8px 8px 0;
+  padding: 11px 16px;
+  margin: 20px 0;
 }
-a { color: var(--accent); }
+a { color: var(--accent); text-underline-offset: 2.5px; transition: color 0.15s ease; }
 a:hover { color: var(--accent-2); }
+
+.lede {
+  font-style: italic;
+  color: var(--muted);
+  font-size: 17.5px;
+  margin: 30px 0 6px;
+}
 
 /* ---------- home layout ---------- */
 .profile {
@@ -81,30 +100,51 @@ a:hover { color: var(--accent-2); }
 }
 .profile img {
   width: 235px;
-  border-radius: 6px;
+  border-radius: 10px;
   flex-shrink: 0;
+  box-shadow: 0 2px 14px rgba(1, 31, 91, 0.12);
 }
 .contact { color: var(--muted); font-size: 15.5px; margin-top: 10px; }
 .contact div { margin: 2px 0; }
 
 /* ---------- research entries ---------- */
-.paper { margin-bottom: 26px; }
+.paper {
+  margin-bottom: 22px;
+  padding: 16px 20px;
+  background: #fbfaf7;
+  border: 1px solid #edeae3;
+  border-radius: 10px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.paper:hover {
+  border-color: #ddd8cd;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
 .paper .title { font-weight: bold; font-size: 17.5px; }
 .paper .byline { font-style: italic; color: var(--muted); margin: 2px 0; }
-.paper .status { font-size: 15.5px; color: var(--muted); margin: 2px 0; }
+.paper .hook { font-size: 15.5px; color: #333; margin: 8px 0 6px; }
+.paper .status { font-size: 15px; color: var(--muted); margin: 2px 0; }
 .paper .tag {
   font-style: normal;
   color: var(--accent-2);
   font-weight: bold;
 }
-details { margin-top: 6px; }
+.paper p { font-size: 16px; margin: 8px 0 0; }
+details { margin-top: 8px; }
 details summary {
   cursor: pointer;
   color: var(--accent);
-  font-size: 15.5px;
+  font-size: 15px;
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
-details p { font-size: 15.5px; margin: 8px 0 0; color: #333; }
+details summary:hover { color: var(--accent-2); }
+details p {
+  font-size: 15.5px;
+  margin: 10px 0 2px;
+  color: #333;
+  border-left: 2px solid var(--rule);
+  padding-left: 14px;
+}
 
 /* ---------- lists & tables ---------- */
 ul { padding-left: 22px; }
@@ -124,7 +164,9 @@ footer {
 @media (max-width: 640px) {
   .profile { flex-direction: column; align-items: center; text-align: center; }
   .profile img { width: 200px; }
+  .profile h1::after { margin-left: auto; margin-right: auto; }
   .contact { text-align: center; }
   nav .container { gap: 4px 14px; }
   body { font-size: 16px; }
+  .paper { padding: 14px 16px; }
 }
