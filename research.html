@@ -27,36 +27,44 @@
   <h2>Job Market Paper</h2>
 
   <div class="paper">
-    <div class="title">From Author to Editor: The Impact on Productivity and Behavioral Outcomes When Working with LLM Drafts</div>
+    <div class="title">The First Draft Problem: Productivity, Quality, and Physiological Strain in LLM-Assisted Writing</div>
     <div class="byline">with Hummy Song and Christian Terwiesch</div>
     <p class="hook">Editing an LLM draft can feel better compared to writing from scratch — but sensors and physiological metrics
-    on the body show that cognitive load is accumulating just as quickly. </p>
+    on the body show that fatigue is accumulating even faster. </p>
     <div class="status">Working paper · <span class="tag">&#9733; Job Market Paper</span></div>
     <details>
       <summary>Abstract</summary>
-      <p>Large language models (LLMs) are commonly used to reduce documentation burden and
-      cognitive load, yet many past studies report heterogeneous productivity gains. We study how
-      LLM drafting assistance reshapes documentation work in two complementary experiments.
-      Study 1 is an online experiment in which clinicians complete clinical documentation either by
-      editing an LLM-generated draft or by writing it from scratch. Editing does not result in time
-      savings or quality improvements on average: clinicians vary widely in how they interact with
-      the provided draft, and accountability converts writing time into editing time. Study 2 is a
-      randomized lab experiment in which 100 university students summarize recorded interviews
-      with or without LLM drafts while we record keystrokes, self-reported workload, and
-      physiological measures of fatigue (heart rate, skin conductance, pupil diameter, and eye
-      movements). In this controlled setting the predicted gains materialize — editing makes
-      students roughly 60% more productive, raises quality, and lowers self-reported workload —
-      but physiological fatigue accumulates as quickly when editing as when writing, and in some
-      cases faster. Working with LLM drafts transforms the author from writer to editor: time
-      savings are setting-dependent, quality gains are expertise-dependent, and the apparent relief
-      of editing can mask fatigue that registers in the body rather than in awareness.</p>
+      <p>The use of large language models (LLMs) has grown rapidly over the past few years, especially
+      in health care, where documentation burden remains a persistent problem for practicing clinicians.
+      However, despite the deployment of many ambient scribes for documentation, it is still unclear how
+      LLMs impact those who work with them. Across two preregistered studies, we examine how this
+      shift—from writing documentation to editing an LLM-generated draft—impacts workers. We study
+      this &ldquo;first draft problem&rdquo;: eliminating the blank page does not remove the work of documentation
+      but relocates it into revising and editing. In Study 1, an online experiment with 16 clinicians
+      producing documentation following a teletherapy patient encounter, we establish the puzzle: counter
+      to our hypotheses, editing an LLM-generated draft of the documentation as opposed to writing it
+      from scratch does not result in time savings or quality improvements on average. Instead, while some
+      clinicians experience no time savings but large improvements in quality after making substantial
+      revisions, others experience meaningful time savings and no change in quality after making limited
+      revisions. In other words, we observe significant heterogeneity in how clinicians engage with the
+      same draft, which leads to variation in productivity and quality. In Study 2, a lab experiment with
+      100 university students summarizing video interviews, we unpack the mechanisms underlying this
+      heterogeneity using granular keystroke logs, validated self-reports of workload, and micro-level
+      physiological and eye-tracking measurements. In this setting, we find the expected productivity
+      improvements: editing reduces task completion time by roughly 70%, raises quality, and lowers
+      self-reported workload. Yet the physiological evidence tells a more nuanced story. Physiological
+      markers indicate that fatigue accumulates faster when editing an LLM-generated draft than when
+      writing from scratch. Thus, we find that (a) time savings can be real, but are setting dependent;
+      (b) quality improvements are possible, but the relationship between how heavily a draft is revised
+      and the quality of the result differs sharply across our two settings; and (c) while editing an LLM
+      draft lowers reported cognitive load, the body still tires faster over time.</p>
     </details>
   </div>
 
   <h2>Working Papers</h2>
 
   <div class="paper">
-    <div class="title">When to Intervene: Decision-Aware Learning from Wearable Sensor Streams in Military Aviation</div>
+    <div class="title">When to Step In: Decision-Aware Representation Learning for Real-Time AI Interventions</div>
     <div class="byline">with Gad Allon and Ken Moon</div>
     <p class="hook">Using wearable sensors from 400+ Air Force training flights, we develop a framework
     that learns the pilot's state to intervene before danger occurs. We focus on uncovering the latent state to determine
@@ -64,23 +72,28 @@
     <div class="status">Working paper — supported by the Mack Institute for Innovation Management</div>
     <details>
       <summary>Abstract</summary>
-      <p>Many decision-making settings hinge on recognizing when to act: correctly identifying
-      critical moments where taking action has a large impact. This problem is especially hard in
-      supervision-poor environments, where operations are richly observed but the decision-relevant
-      state is not, with little ground truth about consequential moments. We develop a
-      decision-aware learning framework for such settings by connecting the representation learner
-      for the state space to the downstream decision-making problem, training the learned
-      representation to be robust through adversarial reweighting of the most decision-relevant
-      windows. We apply the framework to military aviation training, where wearable sensors track
-      physiological and environmental conditions during training flights and managers seek to
-      intervene before fatigue- or hypoxia-related risk becomes severe. Using data from more than
-      400 U.S. Air Force training flights, we find that the learned state space identifies coherent
-      high-risk regions and that experienced aviators transition differently around those regions.</p>
+      <p>Operational decision-makers often cannot perform well without substantial experience, and
+      learning is slow when feedback is delayed and attention is a scarce resource allocated over many
+      competing priorities. We propose to augment the decision-making process with intelligent contextual
+      cues, identified from data, that train the decision-maker to achieve rapid optimality. We study this
+      AI-based augmentation in the context of fatigue and safety risk management for military aviators,
+      where latent physiological vulnerability can build during a sortie and rarely surfaces as a safety
+      hazard—but when a hazard does occur, the risks are extreme. Partnering with a company that outfits
+      aviators at 22 U.S. Air Force bases with wearable sensors recording synchronized multistream data,
+      we construct a label-free risk proxy that flags &ldquo;high-stress&rdquo; episodes in which physiological
+      reactions (e.g., heart rate increases or blood oxygen decreases) are unusually strong relative to
+      contemporaneous maneuver-induced stress; we discover a small number of interpretable situations
+      from the sensor streams using self-supervised learning; and we design a budget-constrained
+      intervention policy through a decision-feedback training loop that upweights the episodes most
+      influential for the policy. Two minutes prior to a hypoxia alarm, high-stress episodes appear 104%
+      more often than in matched control windows with similar maneuver-induced stress, and given a hard
+      budget of 5 interventions during a 2-hour flight, prescribed interventions decrease projected time
+      spent in high-stress episodes by 14.20%.</p>
     </details>
   </div>
 
   <div class="paper">
-    <div class="title">Learning How to Learn: Adaptive Review Policies for Long-Term Memory and Engagement</div>
+    <div class="title">Learning How to Learn: Adaptive Algorithms for Long-Term Memory</div>
     <div class="byline">with Gad Allon and Ken Moon</div>
     <p class="hook">Learning for long term retention has always been a difficult task: just how much practice can a platform require without driving users away? With our new memory model that balances learning and attrition, review
     burden falls by half — and students are projected to stick around for much longer.</p>
@@ -118,7 +131,7 @@
 
 <footer>
   <div class="container">
-    Xufei Liu · <a href="mailto:xufei@wharton.upenn.edu">xufei@wharton.upenn.edu</a> · Last updated July 2026
+    Xufei Liu · <a href="mailto:xufei@wharton.upenn.edu">xufei@wharton.upenn.edu</a> · Last updated August 2026
   </div>
 </footer>
 
