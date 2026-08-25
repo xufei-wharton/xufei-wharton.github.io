@@ -130,6 +130,13 @@ a:hover { color: var(--accent-2); }
   font-weight: bold;
 }
 .paper p { font-size: 16px; margin: 8px 0 0; }
+.paper .links {
+  font-size: 15px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 6px 0 0;
+}
+.paper .links a { font-weight: bold; text-decoration: none; }
+.paper .links a:hover { text-decoration: underline; }
 details { margin-top: 8px; }
 details summary {
   cursor: pointer;
