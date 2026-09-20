@@ -77,11 +77,10 @@ h3 { font-size: 17.5px; margin: 22px 0 2px; }
 .subtitle { color: var(--muted); margin: 0 0 2px; }
 .jobmarket {
   font-weight: bold;
-  color: var(--accent);
-  background: linear-gradient(110deg, var(--surface-blue), var(--surface-blue-soft) 65%, var(--bg));
-  border: 0;
-  border-radius: 22px;
-  padding: 18px 24px;
+  background: #fdf6ec;
+  border-left: 4px solid var(--accent-2);
+  border-radius: 0 8px 8px 0;
+  padding: 11px 16px;
   margin: 20px 0;
 }
 a { color: var(--accent); text-underline-offset: 2.5px; transition: color 0.15s ease; }
@@ -176,12 +175,39 @@ footer {
 
 /* ---------- mobile ---------- */
 @media (max-width: 640px) {
-  .profile { flex-direction: column; align-items: center; text-align: center; }
+  .about-intro { text-wrap: balance; }
+  .profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    margin-top: 28px;
+  }
   .profile img { width: 200px; }
+  .profile h1 { margin-top: 0; }
   .profile h1::after { margin-left: auto; margin-right: auto; }
+  .profile .subtitle { text-wrap: balance; }
   .contact { text-align: center; }
-  nav .container { gap: 4px 14px; }
+  nav .container {
+    display: grid;
+    grid-template-columns: repeat(5, max-content);
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 8px;
+    padding-top: 12px;
+    padding-bottom: 6px;
+  }
+  nav .brand { grid-column: 1 / -1; margin-right: 0; }
+  nav a.navlink {
+    font-size: 14.5px;
+    letter-spacing: 0;
+    white-space: nowrap;
+    min-height: 44px;
+    padding: 10px 0;
+    border-bottom: 2px solid transparent;
+    line-height: 1.4;
+  }
+  nav a.navlink.active { padding-bottom: 10px; border-bottom-color: var(--accent-2); }
   body { font-size: 16px; }
   .paper { padding: 18px 20px; border-radius: 20px; }
-  .jobmarket { padding: 16px 20px; border-radius: 20px; }
 }
