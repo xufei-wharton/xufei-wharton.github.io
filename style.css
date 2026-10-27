@@ -83,6 +83,11 @@ h3 { font-size: 17.5px; margin: 22px 0 2px; }
   padding: 11px 16px;
   margin: 20px 0;
 }
+.jobmarket-talk {
+  display: block;
+  margin-top: 7px;
+  font-weight: normal;
+}
 a { color: var(--accent); text-underline-offset: 2.5px; transition: color 0.15s ease; }
 a:hover { color: var(--accent-2); }
 
